@@ -4,7 +4,7 @@ const env = require('../config/env');
 function authenticate(req, res, next) {
     const header = req.headers.authorization;
 
-    if (!header || !header.starsWith('Bearer ')) {
+    if (!header || !header.startsWith('Bearer ')) {
         return res.status(401).json({
             ok: false,
             message: 'Token requerido'
@@ -17,7 +17,7 @@ function authenticate(req, res, next) {
         req.user = jwt.verify(token, env.jwt.secret);
         next();
     } catch {
-        return res.status(401).jason({
+        return res.status(401).json({
             ok: false,
             message: 'Token invalido o expirado'
         })

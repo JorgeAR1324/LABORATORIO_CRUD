@@ -27,7 +27,7 @@ async function seedAdmin() {
         [name, email, hash, 'admin']
     );
 
-    console.log(`Usuario admin creado: ${email}`);
+    console.log(`Usuario admin creado: ${name}`);
 }
 
 module.exports = seedAdmin;

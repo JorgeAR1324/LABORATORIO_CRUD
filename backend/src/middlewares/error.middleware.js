@@ -8,7 +8,7 @@ function errorHandler(error,req,res,next) {
         });
     }
 
-    consolore.error(error);
+    console.error(error);
 
     res.status(500).json({
         ok:false,

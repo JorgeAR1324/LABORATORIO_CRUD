@@ -1,11 +1,11 @@
-const authService = require('../service/auth.service');
+const authService = require('../services/auth.service');
 
-async function rigster(req,res,next) {
+async function register(req,res,next) {
     try {
         const {id_usario} = await authService.registerUser(req.body);
 
-        return res.status(201),json({
-            od: true,
+        return res.status(201).json({
+            ok: true,
             message: 'Usuario registrado',
             id_usario
         });
