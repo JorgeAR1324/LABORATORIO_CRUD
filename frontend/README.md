@@ -6,7 +6,7 @@ React + Vite para consumir el backend del laboratorio
 
 - Node.js 20+
 - Backend ejecutandose en `http//localhost:3000`
-- Base de datos `lab_crud`
+- Base de datos `laboratorio_crud`
 
 ## Instalar 
 
